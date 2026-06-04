@@ -1,14 +1,39 @@
-function changeTint(value){
+let currentVehicle = "suv";
+let currentTint = "90";
 
-    document.getElementById("tintValue").innerText = value + "%";
+function changeVehicle(vehicle) {
+    currentVehicle = vehicle;
+    updateImage();
+}
 
-    let filename;
+function changeTint(tint) {
+    currentTint = tint;
+    updateImage();
+}
 
-    if(value === "5"){
-        filename = "suv_05.jpg";
-    }else{
-        filename = "suv_" + value + ".jpg";
-    }
+function updateImage() {
+
+    document.getElementById("tintValue").innerText =
+        currentTint + "% VLT";
+
+    let filename =
+        currentVehicle + "_" + currentTint + ".jpg";
 
     document.getElementById("carImage").src = filename;
+
+    updateInfo();
+}
+
+function updateInfo() {
+
+    const badge = document.getElementById("badge");
+
+    if (
+        currentTint === "20" ||
+        currentTint === "35"
+    ) {
+        badge.innerText = "🔥 Most Popular";
+    } else {
+        badge.innerText = "";
+    }
 }
