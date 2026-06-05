@@ -10,41 +10,60 @@
 
 <div class="container">
 
-    <h1>ClearPlex Tint Simulator</h1>
-     <div class="vehicle-selector">
+    <div class="header">
+        <img src="clearplex-logo.jpg" id="logo" alt="ClearPlex Logo">
 
-    <button onclick="changeVehicle('suv')">
-        🚙 SUV
-    </button>
+        <h1>ClearPlex Mongolia</h1>
 
-    <button onclick="changeVehicle('sedan')">
-        🚗 Sedan
-    </button>
+        <p class="subtitle">
+            Машин дээр хальсны бууралтыг урьдчилан харах
+        </p>
+    </div>
 
-</div>
-    <p class="subtitle">
-        Машин дээр хальсны бууралтыг урьдчилан харах
-    </p>
+    <div class="vehicle-selector">
 
-    <img id="carImage" src="suv_90.jpg" alt="SUV Tint">
+        <button id="suvBtn" onclick="changeVehicle('suv')">
+            🚙 SUV
+        </button>
 
-    <h2 id="tintValue">90%</h2>
+        <button id="sedanBtn" onclick="changeVehicle('sedan')">
+            🚗 Sedan
+        </button>
+
+    </div>
+
+    <img id="carImage" src="suv_90.jpg" alt="Tint Simulator">
+
+    <h2 id="tintValue">90% VLT</h2>
+
     <div id="badge"></div>
+
     <div class="buttons">
 
-        <button onclick="changeTint('90')">90%</button>
-        <button onclick="changeTint('80')">80%</button>
-        <button onclick="changeTint('70')">70%</button>
-        <button onclick="changeTint('60')">60%</button>
-        <button onclick="changeTint('50')">50%</button>
-        <button onclick="changeTint('40')">40%</button>
+        <button id="tint90" onclick="changeTint('90')">90%</button>
+        <button id="tint80" onclick="changeTint('80')">80%</button>
+        <button id="tint70" onclick="changeTint('70')">70%</button>
+        <button id="tint60" onclick="changeTint('60')">60%</button>
+        <button id="tint50" onclick="changeTint('50')">50%</button>
+        <button id="tint40" onclick="changeTint('40')">40%</button>
 
-        <button onclick="changeTint('35')">35%</button>
-        <button onclick="changeTint('30')">30%</button>
-        <button onclick="changeTint('20')">20%</button>
-        <button onclick="changeTint('15')">15%</button>
-        <button onclick="changeTint('10')">10%</button>
-        <button onclick="changeTint('05')">5%</button>
+        <button id="tint35" onclick="changeTint('35')">35%</button>
+        <button id="tint30" onclick="changeTint('30')">30%</button>
+        <button id="tint20" onclick="changeTint('20')">20%</button>
+        <button id="tint15" onclick="changeTint('15')">15%</button>
+        <button id="tint10" onclick="changeTint('10')">10%</button>
+        <button id="tint05" onclick="changeTint('05')">5%</button>
+
+    </div>
+
+    <div class="back-section">
+
+        <a
+            class="back-button"
+            href="https://m.me/YOUR_PAGE_NAME"
+        >
+            ↩️ Chat руу буцах
+        </a>
 
     </div>
 
